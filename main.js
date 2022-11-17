@@ -275,6 +275,7 @@ function draw() {
 }
 
 function erase() {
+    ws.send(JSON.stringify({"erase": "true"}));
     ctx.clearRect(0, 0, w, h);
     document.getElementById("canvasimg").style.display = "none";
 }
