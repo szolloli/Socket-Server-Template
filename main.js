@@ -209,21 +209,6 @@ function init() {
           ws.send('pong');
         }
     });
-    
-    ws.on("message", (data) => {
-      if (isJSON(data)) {
-        const currData = JSON.parse(data);
-        broadcast(ws, currData, false);
-      } else if (typeof currData === "string") {
-        if (currData === "pong") {
-          console.log("keepAlive");
-          return;
-        }
-        broadcast(ws, currData, false);
-      } else {
-        console.error("malformed message", data);
-      }
-    });
 
     ws.addEventListener('open', () => {
         console.log('error');
