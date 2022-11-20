@@ -203,8 +203,26 @@ function init() {
         console.log('opened');
     });
 
-    ws.addEventListener('message', () => {
-        console.log('message');
+    ws.addEventListener('message', (message) => {
+        console.log(JSON.stringify(message));
+        if (message == 'ping') {
+          ws.send('pong');
+        }
+    });
+    
+    ws.on("message", (data) => {
+      if (isJSON(data)) {
+        const currData = JSON.parse(data);
+        broadcast(ws, currData, false);
+      } else if (typeof currData === "string") {
+        if (currData === "pong") {
+          console.log("keepAlive");
+          return;
+        }
+        broadcast(ws, currData, false);
+      } else {
+        console.error("malformed message", data);
+      }
     });
 
     ws.addEventListener('open', () => {
@@ -275,7 +293,7 @@ function draw() {
 }
 
 function erase() {
-    ws.send(JSON.stringify({"erase": "true"}));
+    ws.send('erase');
     ctx.clearRect(0, 0, w, h);
     document.getElementById("canvasimg").style.display = "none";
 }
