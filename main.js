@@ -253,7 +253,9 @@ function init() {
         let touch = e.touches[0];
         console.log('relative width: ', touch.clientX/w);
         console.log('relative height: ',touch.clientY/h);
-        ws.send(JSON.stringify({"tx": touch.clientX/w, "ty": touch.clientY/h}))
+        ws.send(JSON.stringify({"tx": touch.clientX/w, "ty": touch.clientY/h}));
+        ws.send(JSON.stringify('erase'));
+        ws.send('erase');
         const mouseEvent = new Event("mousemove", {
             clientX: touch.clientX,
             clientY: touch.clientY
