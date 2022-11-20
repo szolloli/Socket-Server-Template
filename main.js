@@ -254,8 +254,6 @@ function init() {
         console.log('relative width: ', touch.clientX/w);
         console.log('relative height: ',touch.clientY/h);
         ws.send(JSON.stringify({"tx": touch.clientX/w, "ty": touch.clientY/h}));
-        ws.send(JSON.stringify('erase'));
-        ws.send('erase');
         const mouseEvent = new Event("mousemove", {
             clientX: touch.clientX,
             clientY: touch.clientY
@@ -280,8 +278,7 @@ function draw() {
 }
 
 function erase() {
-    console.log('erasing');
-    ws.send('erase');
+    ws.send(JSON.stringify({"tx": -1, "ty": -1}));
     ctx.clearRect(0, 0, w, h);
     //document.getElementById("canvasimg").style.display = "none";
 }
