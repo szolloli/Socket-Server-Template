@@ -278,9 +278,10 @@ function draw() {
 }
 
 function erase() {
+    console.log('erasing');
     ws.send('erase');
     ctx.clearRect(0, 0, w, h);
-    document.getElementById("canvasimg").style.display = "none";
+    //document.getElementById("canvasimg").style.display = "none";
 }
 
 function findxy(res, e) {
