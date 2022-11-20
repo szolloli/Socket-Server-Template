@@ -192,11 +192,13 @@ var canvas, ctx, flag = false,
 
 var x = "black",
     y = 2;
+    
+var ws;
 
 
 
 function init() {
-    let ws = new WebSocket('wss://td-rwen-drawing.herokuapp.com/:443');
+    ws = new WebSocket('wss://td-rwen-drawing.herokuapp.com/:443');
     ws.addEventListener('open', () => {
         console.log('opened');
     });
@@ -242,8 +244,6 @@ function init() {
     canvas.addEventListener("touchstart", function (e) {
         console.log('touchsart')
         findxy('down', e)
-
-        foo()
     }, false);
     canvas.addEventListener("touchmove", function (e) {
         console.log('touchmove', flag, e)
