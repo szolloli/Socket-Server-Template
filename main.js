@@ -324,8 +324,6 @@ function findxy(res, e) {
     }
 </style>
 <body onload="init()">
-//     <canvas id="can" style="border:2px solid;"></canvas>
-//     <input type="button" value="clear" id="clr" size="23" onclick="erase()" style="position:absolute;top:55%;left:15%;">
     
     <input type="button" value="1" id="1" size="23" onclick="send(JSON.stringify({"tone":31}))" style="position:absolute;top:55%;left:15%;height:20px;widt:20px;">
     
