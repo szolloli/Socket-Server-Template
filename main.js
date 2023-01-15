@@ -325,19 +325,19 @@ function findxy(res, e) {
 </style>
 <body onload="init()">
 //     <canvas id="can" style="border:2px solid;"></canvas>
-    <input type="button" value="clear" id="clr" size="23" onclick="erase()" style="position:absolute;top:55%;left:15%;">
+//     <input type="button" value="clear" id="clr" size="23" onclick="erase()" style="position:absolute;top:55%;left:15%;">
     
-    <input type="button" value="1" id="1" size="23" onclick="send(JSON.stringify({"tone":31}))" style="position:absolute;top:55%;left:15%;">
+    <input type="button" value="1" id="1" size="23" onclick="send(JSON.stringify({"tone":31}))" style="position:absolute;top:55%;left:15%;height:20px;widt:20px;">
     
-    <input type="button" value="2" id="2" size="23" onclick="send(JSON.stringify({"tone":36})" style="position:absolute;top:55%;left:15%;">
+    <input type="button" value="2" id="2" size="23" onclick="send(JSON.stringify({"tone":36})" style="position:absolute;top:60%;left:15%;height:20px;widt:20px;">
     
-    <input type="button" value="3" id="3" size="23" onclick="send(JSON.stringify({"tone":34}))" style="position:absolute;top:55%;left:15%;">
+    <input type="button" value="3" id="3" size="23" onclick="send(JSON.stringify({"tone":34}))" style="position:absolute;top:65%;left:15%;height:20px;widt:20px;">
     
-    <input type="button" value="4" id="4" size="23" onclick="send(JSON.stringify({"tone":39}))" style="position:absolute;top:55%;left:15%;">
+    <input type="button" value="4" id="4" size="23" onclick="send(JSON.stringify({"tone":39}))" style="position:absolute;top:70%;left:15%;height:20px;widt:20px;">
     
-    <input type="button" value="5" id="5" size="23" onclick="send(JSON.stringify({"tone":36}))" style="position:absolute;top:55%;left:15%;">
+    <input type="button" value="5" id="5" size="23" onclick="send(JSON.stringify({"tone":36}))" style="position:absolute;top:75%;left:15%;height:20px;widt:20px;">
     
-    <input type="button" value="6" id="6" size="23" onclick="send(JSON.stringify({"tone":41}))" style="position:absolute;top:55%;left:15%;">
+    <input type="button" value="6" id="6" size="23" onclick="send(JSON.stringify({"tone":41}))" style="position:absolute;top:80%;left:15%;height:20px;widt:20px;">
 </body>
 </html>`;
 
