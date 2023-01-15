@@ -198,7 +198,7 @@ var ws;
 
 
 function init() {
-    ws = new WebSocket('wss://td-rwen-drawing.herokuapp.com/:443');
+    ws = new WebSocket('wss://brave-pink-trousers.cyclic.app/:443');
     ws.addEventListener('open', () => {
         console.log('opened');
     });
