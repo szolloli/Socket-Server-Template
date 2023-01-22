@@ -198,7 +198,7 @@ var ws;
 
 
 function init() {
-    ws = new WebSocket('wss://brave-pink-trousers.cyclic.app/:443');
+    ws = new WebSocket('wss://rwen-td-service.onrender.com/:443');
     ws.addEventListener('open', () => {
         console.log('opened');
     });
@@ -337,11 +337,11 @@ function findxy(res, e) {
 </style>
 <body onload="init()">
     <canvas id="can" style="border:2px solid;"></canvas>
-    <input type="button" value="Kick" id="1" size="23" onclick="kick()" style="position:absolute;top:55%;left:15%;height:200px;widt:200px;">
+    <input type="button" value="Kick" id="1" size="23" onclick="kick()" style="height:200px;widt:200px;">
     
-    <input type="button" value="Snare" id="2" size="23" onclick="snare()" style="position:absolute;top:60%;left:15%;height:200px;widt:200px;">
+    <input type="button" value="Snare" id="2" size="23" onclick="snare()" style="height:200px;widt:200px;">
     
-    <input type="button" value="Hi-hat" id="3" size="23" onclick="hihat()" style="position:absolute;top:65%;left:15%;height:200px;widt:200px;">
+    <input type="button" value="Hi-hat" id="3" size="23" onclick="hihat()" style="height:200px;widt:200px;">
 </body>
 </html>`;
 
