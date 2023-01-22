@@ -284,15 +284,15 @@ function erase() {
 }
 
 function kick() {
-  send(JSON.stringify({"tone":34}));
+  ws.send(JSON.stringify({"tone":34}));
 }
 
 function snare() {
-  send(JSON.stringify({"tone":35}));
+  ws.send(JSON.stringify({"tone":35}));
 }
 
 function hihat() {
-  send(JSON.stringify({"tone":36}));
+  ws.send(JSON.stringify({"tone":36}));
 }
 
 function findxy(res, e) {
@@ -336,7 +336,6 @@ function findxy(res, e) {
     }
 </style>
 <body onload="init()">
-    <canvas id="can" style="border:2px solid;"></canvas>
     <input type="button" value="Kick" id="1" size="23" onclick="kick()" style="height:200px;widt:200px;">
     
     <input type="button" value="Snare" id="2" size="23" onclick="snare()" style="height:200px;widt:200px;">
